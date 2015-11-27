@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>  
+<!DOCTYPE Configure PUBLIC "-//Mort Bay Consulting//DTD Configure//EN"  
+"http://jetty.mortbay.org/configure.dtd">
+<Configure class="org.mortbay.jetty.webapp.WebAppContext">
+  <!--  
+    <New id="dataSource" class="org.mortbay.jetty.plus.naming.Resource">
+        <Arg>java:jdbc/appmgt</Arg>
+        <Arg>
+            <New class="com.mysql.jdbc.jdbc2.optional.MysqlDataSource">
+                <Set name="url">jdbc:mysql://localhost:3306/test</Set>
+                <Set name="user">root</Set>
+                <Set name="password">asdf1234</Set>
+            </New>
+        </Arg>
+    </New>
+-->
+<!--     <New id="dataSource" class="org.mortbay.jetty.plus.naming.Resource">
+        <Arg>jdbc/appmgt</Arg>
+        <Arg>
+            <New class="oracle.jdbc.pool.OracleDataSource">
+                <Set name="URL">jdbc:oracle:thin:@10.36.64.250:1521:ORCL</Set>
+                <Set name="user">openlbs</Set>
+                <Set name="password">openlbs</Set>
+            </New>
+        </Arg>
+    </New>
+    
+    <New id="dataSource1" class="org.mortbay.jetty.plus.naming.Resource">
+        <Arg>jdbc/uspmgt</Arg>
+        <Arg>
+            <New class="oracle.jdbc.pool.OracleDataSource">
+                <Set name="URL">jdbc:oracle:thin:@10.36.64.250:1521:ORCL</Set>
+                <Set name="user">openlbs</Set>
+                <Set name="password">openlbs</Set>
+            </New>
+        </Arg>
+    </New> -->
+</Configure>  

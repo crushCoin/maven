@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd 
+    http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+
+	<!-- 线程执行器配置，用于任务注册 -->
+	<bean id="executor"
+		class="org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor">
+		<property name="corePoolSize" value="${task.corePoolSize}" />
+		<property name="maxPoolSize" value="${task.maxPoolSize}" />
+		<property name="queueCapacity" value="${task.queueCapacity}" />
+	</bean>
+	
+	<!-- 调度业务Job：自动扣分 解除限制 -->
+	<bean id="companyJobDetail"
+		class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+		<property name="targetObject" ref="companyJobService" />
+		<property name="targetMethod" value="downScoreJob" />
+	</bean>
+
+	<!-- 调度触发器：自动扣分 解除限制  -->
+	<bean id="companyTaskTrigger" class="org.springframework.scheduling.quartz.CronTriggerBean">
+		<property name="jobDetail" ref="companyJobDetail" />
+		<!-- 延迟启动时间：ms
+		<property name="startDelay" value="${dataanalysis.startDelay}" /> -->
+		<!-- 执行规则表达式 -->
+		<property name="cronExpression" value="${company.cronExpression}" />
+	</bean>
+
+	<!-- 设置调度:自动扣分 解除限制  -->
+	<bean class="org.springframework.scheduling.quartz.SchedulerFactoryBean" lazy-init="false">
+		<property name="triggers">
+			<list>
+				<ref bean="companyTaskTrigger" />
+			</list>
+		</property>
+		<property name="taskExecutor" ref="executor" />
+	</bean>
+</beans>

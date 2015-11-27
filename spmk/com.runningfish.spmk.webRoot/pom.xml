@@ -1,0 +1,192 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>RunningFish</groupId>
+    <artifactId>spmk</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
+  </parent>
+  <groupId>RunningFish</groupId>
+  <artifactId>com.runningfish.spmk.webRoot</artifactId>
+  <version>1.0.0-SNAPSHOT</version>
+  <packaging>war</packaging>
+  <name>com.runningfish.spmk.webRoot Maven WebApp</name>
+  <url>http://maven.apache.org</url>
+  
+  <properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<logback.version>1.0.0</logback.version>
+		<logback-ext-spring.version>0.1.1</logback-ext-spring.version>
+	</properties>
+	<dependencies>
+		<!-- logback -->
+		<dependency>
+			<groupId>janino</groupId>
+			<artifactId>janino</artifactId>
+			<version>2.5.10</version>
+		</dependency>
+		<dependency>
+			<groupId>ch.qos.logback</groupId>
+			<artifactId>logback-core</artifactId>
+			<version>${logback.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>ch.qos.logback</groupId>
+			<artifactId>logback-classic</artifactId>
+			<version>${logback.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>ch.qos.logback</groupId>
+			<artifactId>logback-access</artifactId>
+			<version>${logback.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.logback-extensions</groupId>
+			<artifactId>logback-ext-spring</artifactId>
+			<version>${logback-ext-spring.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>RunningFish</groupId>
+			<artifactId>com.runningfish.spmk.common</artifactId>
+			<version>1.0.0-SNAPSHOT</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>RunningFish</groupId>
+			<artifactId>com.runningfish.spmk.upload</artifactId>
+			<version>1.0.0-SNAPSHOT</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>RunningFish</groupId>
+			<artifactId>com.runningfish.spmk.web.person.workbeach</artifactId>
+			<version>1.0.0-SNAPSHOT</version>
+		</dependency>
+		
+
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>3.8.1</version>
+			<scope>test</scope>
+		</dependency>
+
+		<!--iss dependency begin -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-web</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-webmvc</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-jdbc</artifactId>
+		</dependency>
+        <dependency>  
+		       <groupId>org.aspectj</groupId>  
+		       <artifactId>aspectjweaver</artifactId>  
+		       <version>1.6.12</version>  
+		    </dependency>  
+		 <dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+		 </dependency>
+
+		<!-- mybatis -->
+		<dependency>
+			<groupId>org.mybatis</groupId>
+			<artifactId>mybatis-spring</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.mybatis</groupId>
+			<artifactId>mybatis</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>servlet-api</artifactId>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.tomcat</groupId>
+			<artifactId>tomcat-catalina</artifactId>
+			<version>7.0.39</version>
+			<scope>provided</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>log4j</groupId>
+			<artifactId>log4j</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>commons-logging</groupId>
+			<artifactId>commons-logging</artifactId>
+		</dependency>
+		
+		<!-- json -->
+         <dependency>
+             <groupId>org.codehaus.jackson</groupId>
+             <artifactId>jackson-core-asl</artifactId>
+         </dependency>
+         <dependency>
+             <groupId>org.codehaus.jackson</groupId>
+             <artifactId>jackson-mapper-asl</artifactId>
+         </dependency>
+         
+         <dependency>  
+		    <groupId>org.apache.shiro</groupId>  
+		    <artifactId>shiro-core</artifactId>  
+		  </dependency>  
+		  <dependency>  
+		    <groupId>org.apache.shiro</groupId>  
+		    <artifactId>shiro-web</artifactId>  
+		  </dependency>  
+		  <dependency>  
+		    <groupId>org.apache.shiro</groupId>  
+		    <artifactId>shiro-ehcache</artifactId>  
+		  </dependency>  
+		  <dependency>  
+		    <groupId>org.apache.shiro</groupId>  
+		    <artifactId>shiro-spring</artifactId>  
+		  </dependency>  
+		  <dependency>  
+		    <groupId>net.sf.ehcache</groupId>  
+		    <artifactId>ehcache-core</artifactId>  
+		  </dependency>  
+         
+         <dependency>
+		   	<groupId>cglib</groupId>
+		    <artifactId>cglib</artifactId>
+		 </dependency>
+         
+	</dependencies>
+
+	<build>
+		<plugins>
+			<!-- <plugin> <groupId>org.apache.maven.plugins</groupId> <artifactId>maven-war-plugin</artifactId> 
+				</plugin> <plugin> <groupId>org.apache.maven.plugins</groupId> <artifactId>maven-dependency-plugin</artifactId> 
+				</plugin> -->
+			<plugin>
+				<groupId>org.mortbay.jetty</groupId>
+				<artifactId>maven-jetty-plugin</artifactId>
+				<version>6.1.26</version>
+				<configuration>
+					<contextPath>spmk</contextPath>
+					<scanIntervalSeconds>10</scanIntervalSeconds>
+					<jettyEnvXml>src/main/webapp/META-INF/jetty/jetty-env.xml</jettyEnvXml>
+					<connectors>
+						<connector implementation="org.mortbay.jetty.nio.SelectChannelConnector">
+							<port>8087</port>
+							<maxIdleTime>60000</maxIdleTime>
+						</connector>
+					</connectors>
+				</configuration>
+			</plugin>
+		</plugins>
+		<finalName>spmk</finalName>
+	</build>
+  
+</project>

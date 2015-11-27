@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:aop="http://www.springframework.org/schema/aop" xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+       http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.0.xsd
+       http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.0.xsd
+       http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-3.0.xsd
+">
+    <!-- 调用服务端接口 -->
+    <!-- <bean id="remoteService" class="org.springframework.remoting.httpinvoker.HttpInvokerProxyFactoryBean">
+        <property name="serviceUrl" value="http://${proxy.ip}:${proxy.port}/sc/mvc/remoteService"/>
+        <property name="serviceInterface" value="com.isoftstone.auth.framework.core.service.IAuthorizationService"/>
+    </bean> -->
+    <!-- reids缓存操作接口 -->
+    <bean id="cache" class="com.runningfish.spmk.framework.plugin.RedisCache"></bean>
+    
+	<!-- <bean id="defaultRealm" class="com.isoftstone.auth.framework.javaclient.authenticator.ClientAuthRealm">
+		<property name="cache" ref="cache"></property>
+		<property name="authorizationService" ref="remoteService"></property>
+		<property name="systemOrgLabel" ref="systemOrgLabel"></property>
+	</bean> -->
+	
+    <bean id="cacheManager"  class="com.runningfish.spmk.framework.plugin.RedisCacheManager">
+        <property name="cache" ref="cache"></property>
+    </bean>
+	   
+    <bean id="redisSessionDAO" class="com.runningfish.spmk.framework.plugin.RedisSessionDAO">
+		<property name="expire" value="36000000"></property>
+		<property name="cache" ref="cache"></property>
+	</bean>
+	
+	<!-- 会话Cookie模板 -->
+    <bean id="sessionIdCookie" class="org.apache.shiro.web.servlet.SimpleCookie">
+        <constructor-arg value="JSESSIONID"/>
+        <property name="httpOnly" value="true"/>
+        <property name="maxAge" value="-1"/>
+        <!--  <property name="domain" value="${proxy.ip}"/> -->
+        <property name="path" value="/"/>
+    </bean>
+	
+	
+	<bean id="webSessionManager" class="org.apache.shiro.web.session.mgt.DefaultWebSessionManager">
+    	<property name="sessionDAO" ref="redisSessionDAO"></property>
+    	<property name="globalSessionTimeout" value="36000000" />
+    	<!--  <property name="sessionIdCookieEnabled" value="true"/> -->
+    	<property name="sessionIdCookie" ref="sessionIdCookie"/>
+    </bean>
+    
+	<bean id="securityManager" class="org.apache.shiro.web.mgt.DefaultWebSecurityManager">
+		<!-- <property name="realm" ref="defaultRealm" /> -->
+		<property name="sessionManager" ref="webSessionManager" />
+		<property name="cacheManager" ref="cacheManager" />
+	</bean>
+	
+	<!-- <bean id="authFilter" class="com.isoftstone.auth.framework.javaclient.web.WebAuthFiter">
+		<property name="securityManager" ref="securityManager" />
+		<property name="loginUrl" value="http://${proxy.ip}:${proxy.port}/epsp/outSession.html" />
+		<property name="successUrl" value="/" />
+		<property name="unauthorizedUrl" value="http://${proxy.ip}:${proxy.port}/epsp/NoRights.html" />
+		<property name="subSystem" value="${subSystemIdentity}"/>
+		<property name="filters">
+			<map>
+				<entry key="url" value-ref="urlFilter" />
+			</map>
+		</property>
+		<property name="filterChainDefinitions">
+			<value>
+			    /resources/** = anon
+			    /epsp/resources/** = anon
+			    /res/resources/** = anon
+			   	/res/ptcompany/** = user
+			   	/res/ptquestion/** = user
+			   	/res/ptanalysis/** = user
+			   	/res/ptmessage/** = user
+			   	/res/ptinformation/** = user
+			    /res/ptwork/css/** = anon
+			    /res/ptwork/player/** = anon
+			    /res/ptwork/img/** = anon
+			    /res/ptwork/images/** = anon
+			    /res/ptwork/images_main/** = anon
+			    /res/ptwork/helpdoc/** = anon
+			    /res/ptwork/apk/** = anon
+			    /res/ptwork/js/*.js = anon
+			    /res/ptwork/gld/** = anon
+			    /res/ptwork/tpl/** = anon
+			    /res/ptwork/*.html = anon
+			    /res/ptwork/menu/** = anon
+			    /res/ptwork/footer/** = anon
+			    /res/ptguild/css/** = anon
+			    /res/ptguild/** = anon
+			    /res/ptguild/*.html = anon
+			    /res/ptapp/app/** = user
+			    /res/ptapp/pad/** = anon
+			    /mvc/guildregister/*.json = anon
+			    /mvc/info/*.json = anon
+			    /mvc/focuspic/*.json = anon
+			    /resources/commons/*.js = anon
+			    /resources/commons/jquery.md5.js = anon
+			    /mvc/index/myMessages.json = user
+			    /mvc/scale/selectScaleAll.json  = anon
+			    /mvc/industrytype/selectIndustryTypeAll.json = anon
+			    /mvc/street/selectStreetAll.json = anon
+			    /mvc/addressinfo/selectAddressInfoByParentId.json = anon
+			    /mvc/registertype/selectRegisterTypeAll.json = anon
+			    /mvc/businesstype/selectBusinessTypeAll.json = anon
+			    /mvc/companyinfo/selectCompanyInfoByName.json = anon
+			    /mvc/companyinfo/selectCompanyInfoByCode.json = anon
+			    /mvc/grade/selectGradeAll.json = anon
+			    /mvc/enterprisereporting/*.json = user
+			    /mvc/questionstatistics/*.json = user
+			    /res/mgquestion/question_stats.html = user
+			    /res/mgsys/userManager/accountDetail.html = user
+			    /resources/agiledev/ajaxupload.js = anon
+			   	/NoRights.html = anon
+			   	/outSession.html = anon
+			   	/index.html = anon
+			    /mvc/accountinfo/*.json = anon
+			    /mvc/questionfeedback/*.json = anon
+			    /mvc/userinfo/*.json = anon
+			    /mvc/companyinfo/*.json = user
+			    /mvc/report/*.json = user
+			    /mvc/message/*.json = user
+			    /mvc/messagemgt/*.json = user
+			    /mvc/questiontype/*.json = user
+			    /mvc/questionfeedbackmgt/indicate.json = user
+			    /mvc/desktop/*.json = anon
+			    /mvc/sendemail/*.json = anon
+			    /mvc/fileupload/*.json = anon
+			    /mvc/information/*.json = anon
+			    /mvc/videoshow/*.json = anon
+			    /mvc/downshow/*.json = anon
+			    /mvc/accountinfo/logout.json = anon
+			    /mvc/import/*.json = anon
+			    /mvc/exportexcel/*.json = anon
+			    /loginIndex = anon
+			    /portalIndex = anon
+			    /mvc/template/queryTemplateList.json = user
+			    /mvc/system/*.json = user
+			    /mvc/helpinfo/getHelpInfo.json = anon
+			    /mvc/informationtype/queryAll.json = anon
+			    /mvc/mgcompanyinfo/addHangerInfo.json = anon
+			    /mvc/sysconfig/getSysConfigByKeyName.json = anon
+				/** = user,url
+			</value>
+		</property>
+	</bean> -->
+	<!-- <bean id="urlFilter" class="com.isoftstone.auth.framework.core.filter.UrlFilter">
+	    <property name="systemResourcesCache" ref="systemResourcesCache"></property>
+	</bean> -->
+    <!-- <bean id="systemResourcesCache" class="com.isoftstone.auth.framework.core.internal.SystemResourcesCache">
+        <property name="systemOrgLabel" ref="systemOrgLabel"></property>
+        <property name="cache" ref="cache"></property>
+    </bean> -->
+    <!-- <bean id="checkPermission" class="com.isoftstone.auth.framework.core.internal.CheckPermissions"></bean> -->
+    
+    <!-- <bean id="systemOrgLabel" class="com.isoftstone.auth.framework.api.pojo.SystemOrgLabel">
+		<property name="organizationId" value="${organizationId}" />
+		<property name="subSystemIdentity" value="${subSystemIdentity}" />
+	</bean> -->
+	
+	<!-- Shiro生命周期处理器-->
+    <bean id="lifecycleBeanPostProcessor" class="org.apache.shiro.spring.LifecycleBeanPostProcessor"/>
+</beans>

@@ -1,0 +1,69 @@
+10:18:23.570 [main] DEBUG org.apache.ibatis.logging.LogFactory.debug - Logging initialized using 'org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+10:18:23.580 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean.debug - Property 'configLocation' not specified, using default MyBatis Configuration
+10:18:25.001 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean.debug - Property 'mapperLocations' was not specified or no matching resources found
+10:34:17.616 [Timer-2] DEBUG org.apache.ibatis.logging.LogFactory.debug - Logging initialized using 'org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+10:34:17.629 [Timer-2] DEBUG org.mybatis.spring.SqlSessionFactoryBean.debug - Property 'configLocation' not specified, using default MyBatis Configuration
+10:34:18.063 [Timer-2] DEBUG org.mybatis.spring.SqlSessionFactoryBean.debug - Property 'mapperLocations' was not specified or no matching resources found
+10:34:19.543 [main] DEBUG org.apache.ibatis.logging.LogFactory.debug - Logging initialized using 'org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+10:34:19.563 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean.debug - Property 'configLocation' not specified, using default MyBatis Configuration
+10:34:19.786 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean.debug - Property 'mapperLocations' was not specified or no matching resources found
+10:48:50.355 [main] DEBUG org.apache.ibatis.logging.LogFactory.debug - Logging initialized using 'org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+10:48:50.355 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean.debug - Property 'configLocation' not specified, using default MyBatis Configuration
+10:48:50.574 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean.debug - Property 'mapperLocations' was not specified or no matching resources found
+11:13:52.261 [main] DEBUG org.apache.ibatis.logging.LogFactory.debug - Logging initialized using 'org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+11:13:52.277 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean.debug - Property 'configLocation' not specified, using default MyBatis Configuration
+11:13:52.496 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean.debug - Property 'mapperLocations' was not specified or no matching resources found
+11:15:27.650 [main] DEBUG org.apache.ibatis.logging.LogFactory.debug - Logging initialized using 'org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+11:15:27.665 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean.debug - Property 'configLocation' not specified, using default MyBatis Configuration
+11:15:27.869 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean.debug - Property 'mapperLocations' was not specified or no matching resources found
+11:20:10.391 [Timer-2] DEBUG org.apache.ibatis.logging.LogFactory.debug - Logging initialized using 'org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+11:20:10.406 [Timer-2] DEBUG org.mybatis.spring.SqlSessionFactoryBean.debug - Property 'configLocation' not specified, using default MyBatis Configuration
+11:20:10.610 [Timer-2] DEBUG org.mybatis.spring.SqlSessionFactoryBean.debug - Property 'mapperLocations' was not specified or no matching resources found
+12:39:01.480 [Timer-2] DEBUG org.apache.ibatis.logging.LogFactory.debug - Logging initialized using 'org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+12:39:01.490 [Timer-2] DEBUG org.mybatis.spring.SqlSessionFactoryBean.debug - Property 'configLocation' not specified, using default MyBatis Configuration
+12:39:01.821 [Timer-2] DEBUG org.mybatis.spring.SqlSessionFactoryBean.debug - Property 'mapperLocations' was not specified or no matching resources found
+12:41:32.047 [main] DEBUG org.apache.ibatis.logging.LogFactory.debug - Logging initialized using 'org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+12:41:32.057 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean.debug - Property 'configLocation' not specified, using default MyBatis Configuration
+12:41:32.286 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean.debug - Property 'mapperLocations' was not specified or no matching resources found
+14:43:34.212 [main] DEBUG org.apache.ibatis.logging.LogFactory.debug - Logging initialized using 'org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+14:43:34.228 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean.debug - Property 'configLocation' not specified, using default MyBatis Configuration
+14:43:34.447 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean.debug - Property 'mapperLocations' was not specified or no matching resources found
+14:43:34.603 [main] INFO  com.runningfish.spmk.web.person.workbeach.init.InitPlugin.getPluginFile - check plugin file path=[/D:/my/mavenjar/RunningFish/com.runningfish.spmk.web.person.workbeach/1.0.0-SNAPSHOT/com.runningfish.spmk.web.person.workbeach-1.0.0-SNAPSHOT.jar]
+14:43:34.603 [main] INFO  com.runningfish.spmk.web.person.workbeach.init.InitPlugin.getPluginFile - check plugin file path=[/D:/my/mavenjar/RunningFish/com.runningfish.spmk.web.person.workbeach/1.0.0-SNAPSHOT/com.runningfish.spmk.web.person.workbeach-1.0.0-SNAPSHOT.jar]
+14:43:34.603 [main] DEBUG com.runningfish.framework.plugin.PluginsMananger.addPlugin - install plugin successful, plugin context=[pswork]
+14:51:46.931 [Timer-2] DEBUG org.apache.ibatis.logging.LogFactory.debug - Logging initialized using 'org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+14:51:46.942 [Timer-2] DEBUG org.mybatis.spring.SqlSessionFactoryBean.debug - Property 'configLocation' not specified, using default MyBatis Configuration
+14:51:47.154 [Timer-2] DEBUG org.mybatis.spring.SqlSessionFactoryBean.debug - Property 'mapperLocations' was not specified or no matching resources found
+14:51:47.308 [Timer-2] INFO  com.runningfish.spmk.web.person.workbeach.init.InitPlugin.getPluginFile - check plugin file path=[/D:/my/mavenjar/RunningFish/com.runningfish.spmk.web.person.workbeach/1.0.0-SNAPSHOT/com.runningfish.spmk.web.person.workbeach-1.0.0-SNAPSHOT.jar]
+14:51:47.309 [Timer-2] INFO  com.runningfish.spmk.web.person.workbeach.init.InitPlugin.getPluginFile - check plugin file path=[/D:/my/mavenjar/RunningFish/com.runningfish.spmk.web.person.workbeach/1.0.0-SNAPSHOT/com.runningfish.spmk.web.person.workbeach-1.0.0-SNAPSHOT.jar]
+14:51:47.309 [Timer-2] DEBUG com.runningfish.framework.plugin.PluginsMananger.addPlugin - install plugin successful, plugin context=[pswork]
+15:53:47.187 [Timer-2] DEBUG org.apache.ibatis.logging.LogFactory.debug - Logging initialized using 'org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+15:53:47.197 [Timer-2] DEBUG org.mybatis.spring.SqlSessionFactoryBean.debug - Property 'configLocation' not specified, using default MyBatis Configuration
+15:53:47.528 [Timer-2] DEBUG org.mybatis.spring.SqlSessionFactoryBean.debug - Property 'mapperLocations' was not specified or no matching resources found
+15:53:47.668 [Timer-2] INFO  com.runningfish.spmk.web.person.workbeach.init.InitPlugin.getPluginFile - check plugin file path=[/D:/my/mavenjar/RunningFish/com.runningfish.spmk.web.person.workbeach/1.0.0-SNAPSHOT/com.runningfish.spmk.web.person.workbeach-1.0.0-SNAPSHOT.jar]
+15:53:47.668 [Timer-2] INFO  com.runningfish.spmk.web.person.workbeach.init.InitPlugin.getPluginFile - check plugin file path=[/D:/my/mavenjar/RunningFish/com.runningfish.spmk.web.person.workbeach/1.0.0-SNAPSHOT/com.runningfish.spmk.web.person.workbeach-1.0.0-SNAPSHOT.jar]
+15:53:47.678 [Timer-2] DEBUG com.runningfish.framework.plugin.PluginsMananger.addPlugin - install plugin successful, plugin context=[pswork]
+16:00:15.442 [main] DEBUG org.apache.ibatis.logging.LogFactory.debug - Logging initialized using 'org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+16:00:15.462 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean.debug - Property 'configLocation' not specified, using default MyBatis Configuration
+16:00:15.693 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean.debug - Property 'mapperLocations' was not specified or no matching resources found
+16:00:15.875 [main] INFO  com.runningfish.spmk.web.person.workbeach.init.InitPlugin.getPluginFile - check plugin file path=[/D:/my/mavenjar/RunningFish/com.runningfish.spmk.web.person.workbeach/1.0.0-SNAPSHOT/com.runningfish.spmk.web.person.workbeach-1.0.0-SNAPSHOT.jar]
+16:00:15.875 [main] INFO  com.runningfish.spmk.web.person.workbeach.init.InitPlugin.getPluginFile - check plugin file path=[/D:/my/mavenjar/RunningFish/com.runningfish.spmk.web.person.workbeach/1.0.0-SNAPSHOT/com.runningfish.spmk.web.person.workbeach-1.0.0-SNAPSHOT.jar]
+16:00:15.875 [main] DEBUG com.runningfish.framework.plugin.PluginsMananger.addPlugin - install plugin successful, plugin context=[pswork]
+16:34:30.274 [main] DEBUG org.apache.ibatis.logging.LogFactory.debug - Logging initialized using 'org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+16:34:30.294 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean.debug - Property 'configLocation' not specified, using default MyBatis Configuration
+16:34:30.505 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean.debug - Property 'mapperLocations' was not specified or no matching resources found
+16:34:30.667 [main] INFO  com.runningfish.spmk.web.person.workbeach.init.InitPlugin.getPluginFile - check plugin file path=[/D:/my/mavenjar/RunningFish/com.runningfish.spmk.web.person.workbeach/1.0.0-SNAPSHOT/com.runningfish.spmk.web.person.workbeach-1.0.0-SNAPSHOT.jar]
+16:34:30.667 [main] INFO  com.runningfish.spmk.web.person.workbeach.init.InitPlugin.getPluginFile - check plugin file path=[/D:/my/mavenjar/RunningFish/com.runningfish.spmk.web.person.workbeach/1.0.0-SNAPSHOT/com.runningfish.spmk.web.person.workbeach-1.0.0-SNAPSHOT.jar]
+16:34:30.667 [main] DEBUG com.runningfish.framework.plugin.PluginsMananger.addPlugin - install plugin successful, plugin context=[pswork]
+16:42:12.832 [Timer-2] DEBUG org.apache.ibatis.logging.LogFactory.debug - Logging initialized using 'org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+16:42:12.842 [Timer-2] DEBUG org.mybatis.spring.SqlSessionFactoryBean.debug - Property 'configLocation' not specified, using default MyBatis Configuration
+16:42:13.053 [Timer-2] DEBUG org.mybatis.spring.SqlSessionFactoryBean.debug - Property 'mapperLocations' was not specified or no matching resources found
+16:42:13.205 [Timer-2] INFO  com.runningfish.spmk.web.person.workbeach.init.InitPlugin.getPluginFile - check plugin file path=[/D:/my/mavenjar/RunningFish/com.runningfish.spmk.web.person.workbeach/1.0.0-SNAPSHOT/com.runningfish.spmk.web.person.workbeach-1.0.0-SNAPSHOT.jar]
+16:42:13.205 [Timer-2] INFO  com.runningfish.spmk.web.person.workbeach.init.InitPlugin.getPluginFile - check plugin file path=[/D:/my/mavenjar/RunningFish/com.runningfish.spmk.web.person.workbeach/1.0.0-SNAPSHOT/com.runningfish.spmk.web.person.workbeach-1.0.0-SNAPSHOT.jar]
+16:42:13.205 [Timer-2] DEBUG com.runningfish.framework.plugin.PluginsMananger.addPlugin - install plugin successful, plugin context=[pswork]
+16:42:22.866 [Timer-2] DEBUG org.apache.ibatis.logging.LogFactory.debug - Logging initialized using 'org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+16:42:22.876 [Timer-2] DEBUG org.mybatis.spring.SqlSessionFactoryBean.debug - Property 'configLocation' not specified, using default MyBatis Configuration
+16:42:23.207 [Timer-2] DEBUG org.mybatis.spring.SqlSessionFactoryBean.debug - Property 'mapperLocations' was not specified or no matching resources found
+16:42:23.369 [Timer-2] INFO  com.runningfish.spmk.web.person.workbeach.init.InitPlugin.getPluginFile - check plugin file path=[/D:/my/mavenjar/RunningFish/com.runningfish.spmk.web.person.workbeach/1.0.0-SNAPSHOT/com.runningfish.spmk.web.person.workbeach-1.0.0-SNAPSHOT.jar]
+16:42:23.369 [Timer-2] INFO  com.runningfish.spmk.web.person.workbeach.init.InitPlugin.getPluginFile - check plugin file path=[/D:/my/mavenjar/RunningFish/com.runningfish.spmk.web.person.workbeach/1.0.0-SNAPSHOT/com.runningfish.spmk.web.person.workbeach-1.0.0-SNAPSHOT.jar]
+16:42:23.369 [Timer-2] DEBUG com.runningfish.framework.plugin.PluginsMananger.addPlugin - install plugin successful, plugin context=[pswork]

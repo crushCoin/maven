@@ -1,0 +1,49 @@
+2015-10-14 09:35:25,357 [main] DEBUG org.apache.ibatis.logging.LogFactory - Logging initialized using 'org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+2015-10-14 09:35:25,370 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Property 'configLocation' not specified, using default MyBatis Configuration
+2015-10-14 09:35:25,694 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Property 'mapperLocations' was not specified or no matching resources found
+2015-10-14 09:35:26,388 [main] DEBUG com.runningfish.framework.plugin.PluginsMananger - install plugin successful, plugin context=[pswork]
+2015-10-14 09:35:36,160 [main] DEBUG org.apache.ibatis.logging.LogFactory - Logging initialized using 'org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+2015-10-14 09:35:36,173 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Property 'configLocation' not specified, using default MyBatis Configuration
+2015-10-14 09:35:36,393 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Property 'mapperLocations' was not specified or no matching resources found
+2015-10-14 09:35:36,919 [main] DEBUG com.runningfish.framework.plugin.PluginsMananger - install plugin successful, plugin context=[pswork]
+2015-10-14 09:35:37,062 [main] DEBUG com.runningfish.framework.plugin.PluginsMananger - install plugin successful, plugin context=[pswork]
+2015-10-14 10:04:33,415 [main] DEBUG org.apache.ibatis.logging.LogFactory - Logging initialized using 'org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+2015-10-14 10:04:33,428 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Property 'configLocation' not specified, using default MyBatis Configuration
+2015-10-14 10:04:33,650 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Property 'mapperLocations' was not specified or no matching resources found
+2015-10-14 10:04:34,149 [main] DEBUG com.runningfish.framework.plugin.PluginsMananger - install plugin successful, plugin context=[upload]
+2015-10-14 10:04:34,157 [main] DEBUG com.runningfish.framework.plugin.PluginsMananger - install plugin successful, plugin context=[pswork]
+2015-10-14 10:10:44,336 [main] DEBUG org.apache.ibatis.logging.LogFactory - Logging initialized using 'org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+2015-10-14 10:10:44,349 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Property 'configLocation' not specified, using default MyBatis Configuration
+2015-10-14 10:10:44,594 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Property 'mapperLocations' was not specified or no matching resources found
+2015-10-14 10:10:45,115 [main] DEBUG com.runningfish.framework.plugin.PluginsMananger - install plugin successful, plugin context=[upload]
+2015-10-14 10:10:45,122 [main] DEBUG com.runningfish.framework.plugin.PluginsMananger - install plugin successful, plugin context=[pswork]
+2015-10-14 10:10:45,312 [main] DEBUG com.runningfish.framework.plugin.PluginsMananger - install plugin successful, plugin context=[upload]
+2015-10-14 10:10:45,320 [main] DEBUG com.runningfish.framework.plugin.PluginsMananger - install plugin successful, plugin context=[pswork]
+2015-10-14 10:55:38,137 [Timer-2] DEBUG org.apache.ibatis.logging.LogFactory - Logging initialized using 'org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+2015-10-14 10:55:38,150 [Timer-2] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Property 'configLocation' not specified, using default MyBatis Configuration
+2015-10-14 10:55:38,522 [Timer-2] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Property 'mapperLocations' was not specified or no matching resources found
+2015-10-14 10:55:38,972 [Timer-2] DEBUG com.runningfish.framework.plugin.PluginsMananger - install plugin successful, plugin context=[upload]
+2015-10-14 10:55:38,979 [Timer-2] DEBUG com.runningfish.framework.plugin.PluginsMananger - install plugin successful, plugin context=[pswork]
+2015-10-14 10:55:39,190 [Timer-2] DEBUG com.runningfish.framework.plugin.PluginsMananger - install plugin successful, plugin context=[upload]
+2015-10-14 10:55:39,198 [Timer-2] DEBUG com.runningfish.framework.plugin.PluginsMananger - install plugin successful, plugin context=[pswork]
+2015-10-14 10:56:47,517 [Timer-2] DEBUG org.apache.ibatis.logging.LogFactory - Logging initialized using 'org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+2015-10-14 10:56:47,529 [Timer-2] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Property 'configLocation' not specified, using default MyBatis Configuration
+2015-10-14 10:56:47,942 [Timer-2] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Property 'mapperLocations' was not specified or no matching resources found
+2015-10-14 10:56:48,342 [Timer-2] DEBUG com.runningfish.framework.plugin.PluginsMananger - install plugin successful, plugin context=[upload]
+2015-10-14 10:56:48,349 [Timer-2] DEBUG com.runningfish.framework.plugin.PluginsMananger - install plugin successful, plugin context=[pswork]
+2015-10-14 10:56:48,502 [Timer-2] DEBUG com.runningfish.framework.plugin.PluginsMananger - install plugin successful, plugin context=[upload]
+2015-10-14 10:56:48,509 [Timer-2] DEBUG com.runningfish.framework.plugin.PluginsMananger - install plugin successful, plugin context=[pswork]
+2015-10-14 10:57:38,484 [Timer-2] DEBUG org.apache.ibatis.logging.LogFactory - Logging initialized using 'org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+2015-10-14 10:57:38,531 [Timer-2] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Property 'configLocation' not specified, using default MyBatis Configuration
+2015-10-14 10:57:38,904 [Timer-2] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Property 'mapperLocations' was not specified or no matching resources found
+2015-10-14 10:57:39,700 [Timer-2] DEBUG com.runningfish.framework.plugin.PluginsMananger - install plugin successful, plugin context=[upload]
+2015-10-14 10:57:39,707 [Timer-2] DEBUG com.runningfish.framework.plugin.PluginsMananger - install plugin successful, plugin context=[pswork]
+2015-10-14 10:57:39,935 [Timer-2] DEBUG com.runningfish.framework.plugin.PluginsMananger - install plugin successful, plugin context=[upload]
+2015-10-14 10:57:39,943 [Timer-2] DEBUG com.runningfish.framework.plugin.PluginsMananger - install plugin successful, plugin context=[pswork]
+2015-10-14 10:57:47,712 [Timer-2] DEBUG org.apache.ibatis.logging.LogFactory - Logging initialized using 'org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+2015-10-14 10:57:47,724 [Timer-2] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Property 'configLocation' not specified, using default MyBatis Configuration
+2015-10-14 10:57:47,966 [Timer-2] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Property 'mapperLocations' was not specified or no matching resources found
+2015-10-14 10:57:48,721 [Timer-2] DEBUG com.runningfish.framework.plugin.PluginsMananger - install plugin successful, plugin context=[upload]
+2015-10-14 10:57:48,730 [Timer-2] DEBUG com.runningfish.framework.plugin.PluginsMananger - install plugin successful, plugin context=[pswork]
+2015-10-14 10:57:48,922 [Timer-2] DEBUG com.runningfish.framework.plugin.PluginsMananger - install plugin successful, plugin context=[upload]
+2015-10-14 10:57:48,930 [Timer-2] DEBUG com.runningfish.framework.plugin.PluginsMananger - install plugin successful, plugin context=[pswork]

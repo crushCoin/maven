@@ -1,0 +1,101 @@
+<!-- <?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper
+	namespace="com.isoftstone.epsp.service.config">
+
+	<resultMap id="sysConfig"
+		type="com.isoftstone.epsp.service.config.pojo.SysConfig">
+		<id property="keyId" column="KEY_ID" />
+		<result property="empId" column="EMP_ID"/>
+		<result property="empName" column="EMP_NAME"/>
+		<result property="keyName" column="KEY_NAME"/>
+		<result property="keyDesc" column="KEY_DESC"/>
+		<result property="keyType" column="KEY_TYPE"/>
+		<result property="keyValue1" column="KEY_VALUE1"/>
+		<result property="keyValue2" column="KEY_VALUE2"/>
+		<result property="keyValue3" column="KEY_VALUE3"/>
+		<result property="value4" column="KEY_VALUE4" jdbcType="BLOB" javaType="byte[]" typeHandler="org.apache.ibatis.type.BlobTypeHandler" />
+		<result property="edtTime" column="EDT_TIME" />
+	</resultMap>
+
+	系统配置项查询语句
+    <select id="configList"
+	parameterType="com.isoftstone.epsp.service.config.pojo.SysConfig"
+	resultMap="sysConfig">
+				SELECT C.KEY_ID,
+				       C.EMP_ID,
+				       C.KEY_NAME,
+				       C.KEY_DESC,
+				       C.KEY_TYPE,
+				       C.KEY_VALUE1,
+				       C.KEY_VALUE2,
+				       date_format(C.KEY_VALUE3,'%Y-%m-%d') KEY_VALUE3,
+				       C.KEY_VALUE4,
+				       date_format(C.EDT_TIME,'%Y-%m-%d') EDT_TIME
+		        FROM T_SYS_CONFIG C
+		        <where>
+					<if test="keyName != null and keyName != ''">
+						 and LOWER(C.KEY_NAME) like concat('%',LOWER(#{keyName}),'%')
+						 
+					</if>
+					<if test="keyDesc != null and keyDesc != ''">
+						 and LOWER(C.KEY_DESC) like concat('%',LOWER(#{keyDesc}),'%')
+					</if>
+				</where>
+				limit #{page} , #{rows}
+
+	</select>
+
+	获得总记录数
+	<select id="total"
+		parameterType="com.isoftstone.epsp.service.config.pojo.SysConfig"
+		resultType="int">
+		select count(p.key_id) from T_SYS_CONFIG p
+		<where> 
+			<if test="keyName != null and keyName != ''">
+				 and LOWER(p.KEY_NAME) like concat('%',LOWER(#{keyName}),'%')
+			</if>
+			<if test="keyDesc != null and keyDesc != ''">
+				and LOWER(p.KEY_DESC) like concat('%',LOWER(#{keyDesc}),'%')
+			</if>
+		</where>
+	</select>
+
+	系统配置项详情
+	<select id="configById" resultMap="sysConfig" parameterType="long">
+	    SELECT C.KEY_ID, C.EMP_ID, C.KEY_NAME, C.KEY_DESC, C.KEY_TYPE,
+		C.KEY_VALUE1, C.KEY_VALUE2, date_format(C.KEY_VALUE3,'%Y-%m-%d') KEY_VALUE3, C.KEY_VALUE4, date_format(C.EDT_TIME,'%Y-%m-%d') EDT_TIME
+		FROM T_SYS_CONFIG C WHERE C.KEY_ID = #{id}
+	</select>
+	
+	根据键名称查询配置信息
+	<select id="configByKeyName" resultMap="sysConfig" parameterType="String">
+	    SELECT C.KEY_ID, C.EMP_ID, C.KEY_NAME, C.KEY_DESC, C.KEY_TYPE,
+		C.KEY_VALUE1, C.KEY_VALUE2, date_format(C.KEY_VALUE3,'%Y-%m-%d') KEY_VALUE3, C.KEY_VALUE4, date_format(C.EDT_TIME,'%Y-%m-%d') EDT_TIME
+		FROM T_SYS_CONFIG C WHERE C.KEY_NAME = #{value}
+	</select>
+	
+	修改系统配置项语句
+	<update id="updateSysConfig"
+		parameterType="com.isoftstone.epsp.service.config.pojo.SysConfig">
+		    update T_SYS_CONFIG
+              set
+                  emp_id = #{empId}
+                  ,key_desc = #{keyDesc}
+                  <if test="keyValue1 != null and keyValue1 != ''">
+				  ,key_value1 = #{keyValue1,jdbcType=VARCHAR}
+				  </if>
+				  <if test="keyValue2 != null and keyValue2 != ''">
+				  ,key_value2 = #{keyValue2,jdbcType=NUMERIC}
+				  </if>
+                  <if test="keyValue3 != null and keyValue3 != ''">
+				  ,key_value3 = str_to_date(#{keyValue3},'%Y-%m-%d')
+				  </if>
+                  <if test="keyValue4 != null and keyValue4 != ''">
+				  ,key_value4 = #{keyValue4,jdbcType=BLOB}
+				  </if>
+                  ,EDT_TIME = current_timestamp()
+            where key_id = #{keyId}
+	</update>
+</mapper> -->

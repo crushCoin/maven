@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+<title>spmk</title>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<meta charset="UTF-8"/>
+<meta name="Keywords" content="飞奔的鱼、runningfish" />
+<meta name="Description" content="飞奔的鱼、runningfish" />
+<meta name="Robots" content="all" />
+<meta name="Author" content="飞奔的鱼" />
+<meta name="Copyright" content="飞奔的鱼 版权所有 2015" />
+<meta name="renderer" content="webkit|ie-comp|ie-stand" />
+<meta name="baidu-site-verification" content="dsThW3XTni" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<link rel="icon" href="resources/images/logo.ico" />
+<script type="text/javascript" src="resources/js/jquery-1.8.3.min.js"></script>
+</head>
+<body>
+<h3>test maven webapp</h3>
+<div class="test"></div>
+<script type="text/javascript">
+
+    $(function(){
+    	$.ajax({
+    		url: '/spmk/mvc/test/test.json',
+    		data:{'arg':2},
+    		type : 'post',
+    		dataType: 'json',
+    		//async:false,
+    		success:function(data){
+    			if(null != data){
+    				$.each(data,function(i,v){
+    					$('div.test').append(v);
+    				});
+    			}
+    		}
+    	});
+    });
+
+	var _hmt = _hmt || [];
+	(function() {
+	  var hm = document.createElement("script");
+	  hm.src = "//hm.baidu.com/hm.js?a7625b8ea2e7576f89af1f62d45e6a3b";
+	  var s = document.getElementsByTagName("script")[0]; 
+	  s.parentNode.insertBefore(hm, s);
+	})(); 
+	
+</script>
+</body>
+</html>

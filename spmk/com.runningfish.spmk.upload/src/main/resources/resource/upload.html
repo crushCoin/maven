@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>文件上传</title>
+<link rel="stylesheet" href="../../resources/css/portal/base.css"/>
+<link rel="stylesheet" href="../../resources/css/portal/data.css"/>
+<link rel="stylesheet" href="../../resources/css/portal/info.css"/>
+<script type="text/javascript" src="../../resources/js/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="../../resources/agiledev/ajaxupload.js"></script>
+<script type="text/javascript">
+	$(function(){
+		// 上传
+		new AjaxUpload("#file", {
+			action: '/epsp/mvc/fileupload/fileUpload.json',	// 提交的url
+			autoSubmit: true,						// 自动提交
+			responseType: "json",					// 服务器返回的数据格式
+			name: 'file',							// 提交到后台的文件参数名称
+			//data: {maxSize: 10 * 1024 * 1024},		// 文件大小，默认不限制。
+			onChange: function(file, extension) {	// 文件选择后使用,file--上传文件名, extension--文件扩展名
+				// 验证文件后缀名
+				extension = extension.toLowerCase();
+			return true;
+				/* if (extension && /^(jpg|png|gif|jpeg|bmp)$/.test(extension)) {
+					return true;
+				} else {
+					alert('文件格式不对，请上传jgp|png|gif|jpeg|bmp格式', '提示');
+					return false;
+				} */
+			},
+			onComplete: function(file, data){		//文件上传成功后，file--上传的文件名, data--服务器返回的数据
+				// 这里是文件上传成功后调用的方法
+				if(data.status){
+					// 成功
+					$('<li/>').attr('fp', data.filePath)
+						.append($('<a href="javascript:;"/>').text(data.originalFileName))
+						.append(' (' + data.filePath + ')')
+						.appendTo($('.upload ul'));
+				}else{
+					alert(data.message, '错误');
+				}
+			}
+		});
+		// 下载
+		$('.upload ul').on('click', 'li', function(){
+			var downloadPath = '/epsp/mvc/fileupload/download.json?',
+			fp = $(this).attr('fp'),
+			fn = $(this).find('a').text(),
+			params = 'fp=' + encodeURI(fp) + '&fn=' + encodeURI(fn);
+			window.open(downloadPath + params);
+		});
+	});
+</script>
+</head>
+<body>
+<div class="f_l pro">
+  <div class="position"><span>文件上传测试</span></div>
+  <div class="f_l pro-box">
+    <h1>文件上传测试</h1>
+    <div class="f_l m_t_10 addform">
+	  <ul>
+        <li>
+           <span>上传文件</span>
+           <div class="upload">
+               <input type="button" class="file" id="file" /><label>（附件小于10MB）</label>
+               <ul>
+               </ul>
+           </div> 
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+</body>
+</html>

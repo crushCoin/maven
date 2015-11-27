@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.1.xsd 
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.1.xsd
+		http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-3.1.xsd">
+	<context:component-scan base-package="com.runningfish" />
+	<bean
+		class="org.springframework.web.servlet.mvc.support.ControllerClassNameHandlerMapping">
+		<property name="basePackage">
+			<value>com.runningfish.spmk.upload</value>
+		</property>
+		<property name="interceptors">
+			<list>
+				<bean class="com.runningfish.spmk.common.web.LocateInterceptor" />
+			</list>
+		</property>
+	</bean>
+
+	<!-- 配置 文件上传的支持 一定要加id="multipartResolver" 不然就没有效果 -->
+	<bean id="multipartResolver"
+		class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+		<property name="resolveLazily" value="true" />
+		<property name="defaultEncoding" value="utf-8" />
+		<property name="maxInMemorySize" value="40960" />
+	</bean>
+	
+	<!-- <import resource="context-stroage.xml"/> -->
+</beans>

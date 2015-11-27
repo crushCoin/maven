@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:tx="http://www.springframework.org/schema/tx" xmlns:osgi="http://www.springframework.org/schema/osgi"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd 
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.0.xsd
+		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-3.0.xsd
+		http://www.springframework.org/schema/osgi http://www.springframework.org/schema/osgi/spring-osgi-1.2.xsd">
+
+	<context:property-placeholder
+		location="file:${user.dir}/conf/dfs.properties" />
+
+	<!-- config date path generator -->
+	<bean id="pathGenerator"
+		class="com.isoftstone.storage.support.pathgenerator.DatePathGenerator" />
+
+	<!-- config random filename generator -->
+	<bean id="filenameGenerator"
+		class="com.isoftstone.storage.support.filenamegenerator.RandomFilenameGenerator" />
+
+	<!-- config file storage publish -->
+	<bean id="fileGateway" class="com.isoftstone.storage.support.gateway.FileGateway">
+		<property name="pathGenerator" ref="pathGenerator" />
+		<property name="filenameGenerator" ref="filenameGenerator" />
+		<property name="baseDir" value="${baseDir}" />
+	</bean>
+
+	<bean id="singleGatewaySelector"
+		class="com.isoftstone.storage.support.gatewayselector.SingleGatewaySelector">
+		<property name="gateway" ref="fileGateway" />
+	</bean>
+
+	<bean id="storageService" class="com.isoftstone.storage.support.Storager"
+		init-method="init" destroy-method="destroy">
+		<property name="gatewaySelector" ref="singleGatewaySelector" />
+	</bean>
+</beans> 

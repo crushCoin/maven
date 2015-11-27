@@ -1,0 +1,44 @@
+<!-- <?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper
+	namespace="com.isoftstone.epsp.service.bsysaccount">
+
+	<resultMap id="bsysAccount"
+		type="com.isoftstone.epsp.service.config.pojo.BsysAccount">
+		<id property="id" column="id" />
+		<result property="acountName" column="account_name"/>
+		<result property="userName" column="user_name"/>
+		<result property="createTime" column="create_time"/>
+		<result property="systemIdentity" column="system_identity"/>
+	</resultMap>
+
+	业务系统账号查询语句
+    <select id="queryBSysAccount" parameterType="com.isoftstone.epsp.service.config.pojo.BsysAccount" resultMap="bsysAccount">
+		SELECT a.id,
+		       a.account_name,
+		       a.user_name,
+		       a.system_identity,
+		       date_format(a.create_time,'%Y-%m-%d') create_time
+        FROM t_bs_account a
+        <where>
+			<if test="userName != null and userName != ''">
+				 and a.user_name = #{userName}
+			</if>
+			<if test="systemIdentity != null and systemIdentity != ''">
+				 and a.system_identity = #{systemIdentity}
+			</if>
+		</where>
+	</select>
+	
+	<insert id="addBSysAccount" parameterType="com.isoftstone.epsp.service.config.pojo.BsysAccount">
+	INSERT INTO 
+		t_bs_account(account_name,user_name,system_identity,create_time)
+	VALUES(#{acountName},#{userName},#{systemIdentity},NOW())
+		<selectKey resultType="long" order="AFTER"
+			keyProperty="id">
+			SELECT LAST_INSERT_ID() as id
+		</selectKey>
+	</insert>
+	
+</mapper> -->

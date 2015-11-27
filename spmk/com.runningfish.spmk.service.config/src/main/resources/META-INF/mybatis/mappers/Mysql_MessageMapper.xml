@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.runningfish.spmk.service.config.pojo.Message.Message">
+	<!-- 新增消息 -->
+	<insert id="add" parameterType="com.runningfish.spmk.service.config.pojo.Message">
+		INSERT INTO t_message (
+			rec_id,
+			msg_content,
+			rec_project_id,
+			link_url,
+			app_url,
+			msg_type,
+			rec_type,
+			rec_time
+		) VALUES (
+			#{recId},
+			#{msgContent},
+			#{recProjectId},
+			#{linkUrl},
+			#{appUrl},
+			#{msgType},
+			#{recType},
+			NOW()
+		)
+	</insert>
+	
+	<!-- 批量新增消息，适用于消息主体相同，接收方多人的。 -->
+	<insert id="batchBody" parameterType="map">
+		INSERT INTO t_message (
+			rec_id,
+			msg_content,
+			rec_project_id,
+			link_url,
+			app_url,
+			msg_type,
+			rec_type,
+			rec_time
+		) VALUES
+		<foreach collection="recIds" item="id" separator=",">
+			(
+				#{id},
+				#{message.msgContent},
+				#{message.recProjectId},
+				#{message.linkUrl},
+				#{message.appUrl},
+				#{message.msgType},
+				#{message.recType},
+				NOW()
+			)
+		</foreach>
+	</insert>
+	
+	<!-- 批量新增消息，适用于全部。 -->
+	<insert id="batchAll" parameterType="list">
+		INSERT INTO t_message (
+			rec_id,
+			msg_content,
+			rec_project_id,
+			link_url,
+			app_url,
+			msg_type,
+			rec_type,
+			rec_time,
+			company_msg
+		) VALUES
+		<foreach collection="list" item="message" separator=",">
+			(
+				#{message.recId},
+				#{message.msgContent},
+				#{message.recProjectId},
+				#{message.linkUrl},
+				#{message.appUrl},
+				#{message.msgType},
+				#{message.recType},
+				NOW(),
+				#{message.companyMsg}
+			)
+		</foreach>
+	</insert>
+
+	<!-- 删除消息，逻辑删除 -->
+	<update id="delete" parameterType="map">
+		UPDATE t_message SET
+			isdel = 1,
+			update_time = NOW()
+		WHERE rec_id = #{recId} AND msg_id IN
+		<foreach collection="msgIds" item="id" open="(" separator="," close=")">
+			#{id}
+		</foreach>
+	</update>
+	
+	<!-- 消息已读 -->
+	<update id="read" parameterType="map">
+		UPDATE t_message SET
+			msg_status = 2,
+			read_time = NOW()
+		WHERE msg_status = 1 AND rec_id = #{recId}
+			AND msg_id IN
+		<foreach collection="msgIds" item="id" open="(" separator="," close=")">
+			#{id}
+		</foreach>
+	</update>
+	
+	<update id="update" parameterType="com.runningfish.spmk.service.config.pojo.Message">
+		UPDATE t_message t SET
+			link_url=#{linkUrl}
+		<where>
+	        <if test="msgContent != null">
+				t.msg_content = #{msgContent}
+			</if>
+			<if test="recProjectId != null">
+				AND t.rec_project_id = #{recProjectId}
+			</if>
+			<if test="recId != null">
+				AND t.rec_id = #{recId}
+			</if>
+			<if test="msgType != null">
+				AND t.msg_type = #{msgType}
+			</if>   
+	    </where>
+	</update>
+	
+	<!-- 根据多个参数跟新消息状态 -->
+	<update id="readByParameters" parameterType="com.runningfish.spmk.service.config.pojo.Message">
+		UPDATE t_message t SET
+			msg_status = 2,
+			read_time = NOW()
+		WHERE
+	        <if test="linkUrl != null">
+				t.link_url = #{linkUrl}
+			</if>
+			<if test="recProjectId != null">
+				AND t.rec_project_id = #{recProjectId}
+			</if>
+			<if test="recId != null">
+				AND t.rec_id = #{recId}
+			</if>
+			<if test="msgType != null">
+				AND t.msg_type = #{msgType}
+			</if>   
+	    
+	</update>
+	
+	<delete id="deleteMessage" parameterType="com.runningfish.spmk.service.config.pojo.Message">
+		delete from t_message 
+		<where>
+	        <if test="msgContent != null">
+				msg_content like CONCAT('%',#{msgContent},'%')
+			</if>
+			<if test="recProjectId != null">
+				AND rec_project_id = #{recProjectId}
+			</if>
+			<if test="msgType != null">
+				AND msg_type = #{msgType}
+			</if>   
+			<if test="recId != null">
+				AND rec_id = #{recId}
+			</if>
+	    </where>
+	</delete>
+	
+	<!-- 根据ID，获取消息 -->
+	<select id="get" parameterType="long"
+		resultType="com.runningfish.spmk.service.config.pojo.Message">
+		SELECT
+			t.msg_id msgId,
+			t.rec_id recId,
+			t.msg_content msgContent,
+			t.rec_project_id recProjectId,
+			t.link_url linkUrl,
+			t.app_url appUrl,
+			t.msg_status msgStatus,
+			t.msg_type msgType,
+			t.rec_type recType,
+			t.read_time readTime,
+			t.rec_time recTime,
+			t.update_time updateTime,
+			t.isdel
+		FROM t_message t
+		WHERE t.isdel = 0 AND t.msg_id = #{value}
+	</select>
+	
+	<!-- 获取消息总数 -->
+	<select id="total" parameterType="com.runningfish.spmk.service.config.pojo.MessageParams"
+		resultType="int">
+		SELECT COUNT(1) FROM t_message t
+		WHERE t.isdel = 0
+		<if test="recId != null">
+			AND t.rec_id = #{recId}
+		</if>
+		<if test="msgStatus != null">
+			AND t.msg_status = #{msgStatus}
+		</if>
+		<if test="msgType != null">
+			AND t.msg_type = #{msgType}
+		</if>
+		<if test="recType != null">
+			AND t.rec_type = #{recType}
+		</if>
+		<if test="msgContent != null and msgContent != ''">
+			AND t.msg_content LIKE CONCAT('%', #{msgContent}, '%') escape '/'
+		</if>
+	</select>
+	
+	<!-- 获取所有消息 -->
+	<select id="list" parameterType="com.runningfish.spmk.service.config.pojo.MessageParams"
+		resultType="com.runningfish.spmk.service.config.pojo.Message">
+		SELECT
+			t.msg_id msgId,
+			t.rec_id recId,
+			t.msg_content msgContent,
+			t.rec_project_id recProjectId,
+			t.link_url linkUrl,
+			t.app_url appUrl,
+			t.msg_status msgStatus,
+			t.msg_type msgType,
+			t.rec_type recType,
+			t.read_time readTime,
+			t.rec_time recTime,
+			t.update_time updateTime,
+			t.isdel,
+			t.company_msg as companyMsg
+		FROM t_message t
+		WHERE t.isdel = 0
+		<if test="recId != null">
+			AND t.rec_id = #{recId}
+		</if>
+		<if test="msgStatus != null">
+			AND t.msg_status = #{msgStatus}
+		</if>
+		<if test="msgType != null">
+			AND t.msg_type = #{msgType}
+		</if>
+		<if test="recType != null">
+			AND t.rec_type = #{recType}
+		</if>
+		<if test="msgContent != null and msgContent != ''">
+			AND t.msg_content LIKE CONCAT('%', #{msgContent}, '%') escape '/'
+		</if>
+		ORDER BY
+		<choose>
+			<when test="order != null and order != ''">
+				${order} ${sort}
+			</when>
+			<otherwise>
+				t.rec_time DESC
+			</otherwise>
+		</choose>
+		<if test="isPagination">
+			LIMIT #{start}, #{rows}
+		</if>
+	</select>
+</mapper>

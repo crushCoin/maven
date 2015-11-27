@@ -1,0 +1,99 @@
+09:35:25.357 [main] DEBUG org.apache.ibatis.logging.LogFactory.debug - Logging initialized using 'org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+09:35:25.370 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean.debug - Property 'configLocation' not specified, using default MyBatis Configuration
+09:35:25.694 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean.debug - Property 'mapperLocations' was not specified or no matching resources found
+09:35:26.387 [main] INFO  com.runningfish.spmk.web.person.workbeach.init.InitPlugin.getPluginFile - check plugin file path=[/D:/my/mavenjar/RunningFish/com.runningfish.spmk.web.person.workbeach/1.0.0-SNAPSHOT/com.runningfish.spmk.web.person.workbeach-1.0.0-SNAPSHOT.jar]
+09:35:26.388 [main] INFO  com.runningfish.spmk.web.person.workbeach.init.InitPlugin.getPluginFile - check plugin file path=[/D:/my/mavenjar/RunningFish/com.runningfish.spmk.web.person.workbeach/1.0.0-SNAPSHOT/com.runningfish.spmk.web.person.workbeach-1.0.0-SNAPSHOT.jar]
+09:35:26.388 [main] DEBUG com.runningfish.framework.plugin.PluginsMananger.addPlugin - install plugin successful, plugin context=[pswork]
+09:35:36.160 [main] DEBUG org.apache.ibatis.logging.LogFactory.debug - Logging initialized using 'org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+09:35:36.173 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean.debug - Property 'configLocation' not specified, using default MyBatis Configuration
+09:35:36.393 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean.debug - Property 'mapperLocations' was not specified or no matching resources found
+09:35:36.917 [main] INFO  com.runningfish.spmk.web.person.workbeach.init.InitPlugin.getPluginFile - check plugin file path=[/D:/my/mavenjar/RunningFish/com.runningfish.spmk.web.person.workbeach/1.0.0-SNAPSHOT/com.runningfish.spmk.web.person.workbeach-1.0.0-SNAPSHOT.jar]
+09:35:36.918 [main] INFO  com.runningfish.spmk.web.person.workbeach.init.InitPlugin.getPluginFile - check plugin file path=[/D:/my/mavenjar/RunningFish/com.runningfish.spmk.web.person.workbeach/1.0.0-SNAPSHOT/com.runningfish.spmk.web.person.workbeach-1.0.0-SNAPSHOT.jar]
+09:35:36.919 [main] DEBUG com.runningfish.framework.plugin.PluginsMananger.addPlugin - install plugin successful, plugin context=[pswork]
+09:35:37.060 [main] INFO  com.runningfish.spmk.web.person.workbeach.init.InitPlugin.getPluginFile - check plugin file path=[/D:/my/mavenjar/RunningFish/com.runningfish.spmk.web.person.workbeach/1.0.0-SNAPSHOT/com.runningfish.spmk.web.person.workbeach-1.0.0-SNAPSHOT.jar]
+09:35:37.061 [main] INFO  com.runningfish.spmk.web.person.workbeach.init.InitPlugin.getPluginFile - check plugin file path=[/D:/my/mavenjar/RunningFish/com.runningfish.spmk.web.person.workbeach/1.0.0-SNAPSHOT/com.runningfish.spmk.web.person.workbeach-1.0.0-SNAPSHOT.jar]
+09:35:37.062 [main] DEBUG com.runningfish.framework.plugin.PluginsMananger.addPlugin - install plugin successful, plugin context=[pswork]
+10:04:33.415 [main] DEBUG org.apache.ibatis.logging.LogFactory.debug - Logging initialized using 'org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+10:04:33.428 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean.debug - Property 'configLocation' not specified, using default MyBatis Configuration
+10:04:33.650 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean.debug - Property 'mapperLocations' was not specified or no matching resources found
+10:04:34.147 [main] INFO  com.runningfish.spmk.upload.init.InitPlugin.getPluginFile - check plugin file path=[/D:/my/mavenjar/RunningFish/com.runningfish.spmk.upload/1.0.0-SNAPSHOT/com.runningfish.spmk.upload-1.0.0-SNAPSHOT.jar]
+10:04:34.148 [main] INFO  com.runningfish.spmk.upload.init.InitPlugin.getPluginFile - check plugin file path=[/D:/my/mavenjar/RunningFish/com.runningfish.spmk.upload/1.0.0-SNAPSHOT/com.runningfish.spmk.upload-1.0.0-SNAPSHOT.jar]
+10:04:34.149 [main] DEBUG com.runningfish.framework.plugin.PluginsMananger.addPlugin - install plugin successful, plugin context=[upload]
+10:04:34.156 [main] INFO  com.runningfish.spmk.web.person.workbeach.init.InitPlugin.getPluginFile - check plugin file path=[/D:/my/mavenjar/RunningFish/com.runningfish.spmk.web.person.workbeach/1.0.0-SNAPSHOT/com.runningfish.spmk.web.person.workbeach-1.0.0-SNAPSHOT.jar]
+10:04:34.156 [main] INFO  com.runningfish.spmk.web.person.workbeach.init.InitPlugin.getPluginFile - check plugin file path=[/D:/my/mavenjar/RunningFish/com.runningfish.spmk.web.person.workbeach/1.0.0-SNAPSHOT/com.runningfish.spmk.web.person.workbeach-1.0.0-SNAPSHOT.jar]
+10:04:34.157 [main] DEBUG com.runningfish.framework.plugin.PluginsMananger.addPlugin - install plugin successful, plugin context=[pswork]
+10:10:44.336 [main] DEBUG org.apache.ibatis.logging.LogFactory.debug - Logging initialized using 'org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+10:10:44.349 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean.debug - Property 'configLocation' not specified, using default MyBatis Configuration
+10:10:44.594 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean.debug - Property 'mapperLocations' was not specified or no matching resources found
+10:10:45.113 [main] INFO  com.runningfish.spmk.upload.init.InitPlugin.getPluginFile - check plugin file path=[/D:/my/mavenjar/RunningFish/com.runningfish.spmk.upload/1.0.0-SNAPSHOT/com.runningfish.spmk.upload-1.0.0-SNAPSHOT.jar]
+10:10:45.114 [main] INFO  com.runningfish.spmk.upload.init.InitPlugin.getPluginFile - check plugin file path=[/D:/my/mavenjar/RunningFish/com.runningfish.spmk.upload/1.0.0-SNAPSHOT/com.runningfish.spmk.upload-1.0.0-SNAPSHOT.jar]
+10:10:45.115 [main] DEBUG com.runningfish.framework.plugin.PluginsMananger.addPlugin - install plugin successful, plugin context=[upload]
+10:10:45.122 [main] INFO  com.runningfish.spmk.web.person.workbeach.init.InitPlugin.getPluginFile - check plugin file path=[/D:/my/mavenjar/RunningFish/com.runningfish.spmk.web.person.workbeach/1.0.0-SNAPSHOT/com.runningfish.spmk.web.person.workbeach-1.0.0-SNAPSHOT.jar]
+10:10:45.122 [main] INFO  com.runningfish.spmk.web.person.workbeach.init.InitPlugin.getPluginFile - check plugin file path=[/D:/my/mavenjar/RunningFish/com.runningfish.spmk.web.person.workbeach/1.0.0-SNAPSHOT/com.runningfish.spmk.web.person.workbeach-1.0.0-SNAPSHOT.jar]
+10:10:45.122 [main] DEBUG com.runningfish.framework.plugin.PluginsMananger.addPlugin - install plugin successful, plugin context=[pswork]
+10:10:45.310 [main] INFO  com.runningfish.spmk.upload.init.InitPlugin.getPluginFile - check plugin file path=[/D:/my/mavenjar/RunningFish/com.runningfish.spmk.upload/1.0.0-SNAPSHOT/com.runningfish.spmk.upload-1.0.0-SNAPSHOT.jar]
+10:10:45.311 [main] INFO  com.runningfish.spmk.upload.init.InitPlugin.getPluginFile - check plugin file path=[/D:/my/mavenjar/RunningFish/com.runningfish.spmk.upload/1.0.0-SNAPSHOT/com.runningfish.spmk.upload-1.0.0-SNAPSHOT.jar]
+10:10:45.312 [main] DEBUG com.runningfish.framework.plugin.PluginsMananger.addPlugin - install plugin successful, plugin context=[upload]
+10:10:45.319 [main] INFO  com.runningfish.spmk.web.person.workbeach.init.InitPlugin.getPluginFile - check plugin file path=[/D:/my/mavenjar/RunningFish/com.runningfish.spmk.web.person.workbeach/1.0.0-SNAPSHOT/com.runningfish.spmk.web.person.workbeach-1.0.0-SNAPSHOT.jar]
+10:10:45.320 [main] INFO  com.runningfish.spmk.web.person.workbeach.init.InitPlugin.getPluginFile - check plugin file path=[/D:/my/mavenjar/RunningFish/com.runningfish.spmk.web.person.workbeach/1.0.0-SNAPSHOT/com.runningfish.spmk.web.person.workbeach-1.0.0-SNAPSHOT.jar]
+10:10:45.320 [main] DEBUG com.runningfish.framework.plugin.PluginsMananger.addPlugin - install plugin successful, plugin context=[pswork]
+10:55:38.137 [Timer-2] DEBUG org.apache.ibatis.logging.LogFactory.debug - Logging initialized using 'org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+10:55:38.150 [Timer-2] DEBUG org.mybatis.spring.SqlSessionFactoryBean.debug - Property 'configLocation' not specified, using default MyBatis Configuration
+10:55:38.522 [Timer-2] DEBUG org.mybatis.spring.SqlSessionFactoryBean.debug - Property 'mapperLocations' was not specified or no matching resources found
+10:55:38.969 [Timer-2] INFO  com.runningfish.spmk.upload.init.InitPlugin.getPluginFile - check plugin file path=[/D:/my/mavenjar/RunningFish/com.runningfish.spmk.upload/1.0.0-SNAPSHOT/com.runningfish.spmk.upload-1.0.0-SNAPSHOT.jar]
+10:55:38.970 [Timer-2] INFO  com.runningfish.spmk.upload.init.InitPlugin.getPluginFile - check plugin file path=[/D:/my/mavenjar/RunningFish/com.runningfish.spmk.upload/1.0.0-SNAPSHOT/com.runningfish.spmk.upload-1.0.0-SNAPSHOT.jar]
+10:55:38.972 [Timer-2] DEBUG com.runningfish.framework.plugin.PluginsMananger.addPlugin - install plugin successful, plugin context=[upload]
+10:55:38.978 [Timer-2] INFO  com.runningfish.spmk.web.person.workbeach.init.InitPlugin.getPluginFile - check plugin file path=[/D:/my/mavenjar/RunningFish/com.runningfish.spmk.web.person.workbeach/1.0.0-SNAPSHOT/com.runningfish.spmk.web.person.workbeach-1.0.0-SNAPSHOT.jar]
+10:55:38.979 [Timer-2] INFO  com.runningfish.spmk.web.person.workbeach.init.InitPlugin.getPluginFile - check plugin file path=[/D:/my/mavenjar/RunningFish/com.runningfish.spmk.web.person.workbeach/1.0.0-SNAPSHOT/com.runningfish.spmk.web.person.workbeach-1.0.0-SNAPSHOT.jar]
+10:55:38.979 [Timer-2] DEBUG com.runningfish.framework.plugin.PluginsMananger.addPlugin - install plugin successful, plugin context=[pswork]
+10:55:39.189 [Timer-2] INFO  com.runningfish.spmk.upload.init.InitPlugin.getPluginFile - check plugin file path=[/D:/my/mavenjar/RunningFish/com.runningfish.spmk.upload/1.0.0-SNAPSHOT/com.runningfish.spmk.upload-1.0.0-SNAPSHOT.jar]
+10:55:39.190 [Timer-2] INFO  com.runningfish.spmk.upload.init.InitPlugin.getPluginFile - check plugin file path=[/D:/my/mavenjar/RunningFish/com.runningfish.spmk.upload/1.0.0-SNAPSHOT/com.runningfish.spmk.upload-1.0.0-SNAPSHOT.jar]
+10:55:39.190 [Timer-2] DEBUG com.runningfish.framework.plugin.PluginsMananger.addPlugin - install plugin successful, plugin context=[upload]
+10:55:39.196 [Timer-2] INFO  com.runningfish.spmk.web.person.workbeach.init.InitPlugin.getPluginFile - check plugin file path=[/D:/my/mavenjar/RunningFish/com.runningfish.spmk.web.person.workbeach/1.0.0-SNAPSHOT/com.runningfish.spmk.web.person.workbeach-1.0.0-SNAPSHOT.jar]
+10:55:39.197 [Timer-2] INFO  com.runningfish.spmk.web.person.workbeach.init.InitPlugin.getPluginFile - check plugin file path=[/D:/my/mavenjar/RunningFish/com.runningfish.spmk.web.person.workbeach/1.0.0-SNAPSHOT/com.runningfish.spmk.web.person.workbeach-1.0.0-SNAPSHOT.jar]
+10:55:39.198 [Timer-2] DEBUG com.runningfish.framework.plugin.PluginsMananger.addPlugin - install plugin successful, plugin context=[pswork]
+10:56:47.517 [Timer-2] DEBUG org.apache.ibatis.logging.LogFactory.debug - Logging initialized using 'org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+10:56:47.529 [Timer-2] DEBUG org.mybatis.spring.SqlSessionFactoryBean.debug - Property 'configLocation' not specified, using default MyBatis Configuration
+10:56:47.942 [Timer-2] DEBUG org.mybatis.spring.SqlSessionFactoryBean.debug - Property 'mapperLocations' was not specified or no matching resources found
+10:56:48.341 [Timer-2] INFO  com.runningfish.spmk.upload.init.InitPlugin.getPluginFile - check plugin file path=[/D:/my/mavenjar/RunningFish/com.runningfish.spmk.upload/1.0.0-SNAPSHOT/com.runningfish.spmk.upload-1.0.0-SNAPSHOT.jar]
+10:56:48.341 [Timer-2] INFO  com.runningfish.spmk.upload.init.InitPlugin.getPluginFile - check plugin file path=[/D:/my/mavenjar/RunningFish/com.runningfish.spmk.upload/1.0.0-SNAPSHOT/com.runningfish.spmk.upload-1.0.0-SNAPSHOT.jar]
+10:56:48.342 [Timer-2] DEBUG com.runningfish.framework.plugin.PluginsMananger.addPlugin - install plugin successful, plugin context=[upload]
+10:56:48.348 [Timer-2] INFO  com.runningfish.spmk.web.person.workbeach.init.InitPlugin.getPluginFile - check plugin file path=[/D:/my/mavenjar/RunningFish/com.runningfish.spmk.web.person.workbeach/1.0.0-SNAPSHOT/com.runningfish.spmk.web.person.workbeach-1.0.0-SNAPSHOT.jar]
+10:56:48.349 [Timer-2] INFO  com.runningfish.spmk.web.person.workbeach.init.InitPlugin.getPluginFile - check plugin file path=[/D:/my/mavenjar/RunningFish/com.runningfish.spmk.web.person.workbeach/1.0.0-SNAPSHOT/com.runningfish.spmk.web.person.workbeach-1.0.0-SNAPSHOT.jar]
+10:56:48.349 [Timer-2] DEBUG com.runningfish.framework.plugin.PluginsMananger.addPlugin - install plugin successful, plugin context=[pswork]
+10:56:48.501 [Timer-2] INFO  com.runningfish.spmk.upload.init.InitPlugin.getPluginFile - check plugin file path=[/D:/my/mavenjar/RunningFish/com.runningfish.spmk.upload/1.0.0-SNAPSHOT/com.runningfish.spmk.upload-1.0.0-SNAPSHOT.jar]
+10:56:48.502 [Timer-2] INFO  com.runningfish.spmk.upload.init.InitPlugin.getPluginFile - check plugin file path=[/D:/my/mavenjar/RunningFish/com.runningfish.spmk.upload/1.0.0-SNAPSHOT/com.runningfish.spmk.upload-1.0.0-SNAPSHOT.jar]
+10:56:48.502 [Timer-2] DEBUG com.runningfish.framework.plugin.PluginsMananger.addPlugin - install plugin successful, plugin context=[upload]
+10:56:48.508 [Timer-2] INFO  com.runningfish.spmk.web.person.workbeach.init.InitPlugin.getPluginFile - check plugin file path=[/D:/my/mavenjar/RunningFish/com.runningfish.spmk.web.person.workbeach/1.0.0-SNAPSHOT/com.runningfish.spmk.web.person.workbeach-1.0.0-SNAPSHOT.jar]
+10:56:48.508 [Timer-2] INFO  com.runningfish.spmk.web.person.workbeach.init.InitPlugin.getPluginFile - check plugin file path=[/D:/my/mavenjar/RunningFish/com.runningfish.spmk.web.person.workbeach/1.0.0-SNAPSHOT/com.runningfish.spmk.web.person.workbeach-1.0.0-SNAPSHOT.jar]
+10:56:48.509 [Timer-2] DEBUG com.runningfish.framework.plugin.PluginsMananger.addPlugin - install plugin successful, plugin context=[pswork]
+10:57:38.484 [Timer-2] DEBUG org.apache.ibatis.logging.LogFactory.debug - Logging initialized using 'org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+10:57:38.531 [Timer-2] DEBUG org.mybatis.spring.SqlSessionFactoryBean.debug - Property 'configLocation' not specified, using default MyBatis Configuration
+10:57:38.904 [Timer-2] DEBUG org.mybatis.spring.SqlSessionFactoryBean.debug - Property 'mapperLocations' was not specified or no matching resources found
+10:57:39.698 [Timer-2] INFO  com.runningfish.spmk.upload.init.InitPlugin.getPluginFile - check plugin file path=[/D:/my/mavenjar/RunningFish/com.runningfish.spmk.upload/1.0.0-SNAPSHOT/com.runningfish.spmk.upload-1.0.0-SNAPSHOT.jar]
+10:57:39.699 [Timer-2] INFO  com.runningfish.spmk.upload.init.InitPlugin.getPluginFile - check plugin file path=[/D:/my/mavenjar/RunningFish/com.runningfish.spmk.upload/1.0.0-SNAPSHOT/com.runningfish.spmk.upload-1.0.0-SNAPSHOT.jar]
+10:57:39.700 [Timer-2] DEBUG com.runningfish.framework.plugin.PluginsMananger.addPlugin - install plugin successful, plugin context=[upload]
+10:57:39.706 [Timer-2] INFO  com.runningfish.spmk.web.person.workbeach.init.InitPlugin.getPluginFile - check plugin file path=[/D:/my/mavenjar/RunningFish/com.runningfish.spmk.web.person.workbeach/1.0.0-SNAPSHOT/com.runningfish.spmk.web.person.workbeach-1.0.0-SNAPSHOT.jar]
+10:57:39.707 [Timer-2] INFO  com.runningfish.spmk.web.person.workbeach.init.InitPlugin.getPluginFile - check plugin file path=[/D:/my/mavenjar/RunningFish/com.runningfish.spmk.web.person.workbeach/1.0.0-SNAPSHOT/com.runningfish.spmk.web.person.workbeach-1.0.0-SNAPSHOT.jar]
+10:57:39.707 [Timer-2] DEBUG com.runningfish.framework.plugin.PluginsMananger.addPlugin - install plugin successful, plugin context=[pswork]
+10:57:39.933 [Timer-2] INFO  com.runningfish.spmk.upload.init.InitPlugin.getPluginFile - check plugin file path=[/D:/my/mavenjar/RunningFish/com.runningfish.spmk.upload/1.0.0-SNAPSHOT/com.runningfish.spmk.upload-1.0.0-SNAPSHOT.jar]
+10:57:39.934 [Timer-2] INFO  com.runningfish.spmk.upload.init.InitPlugin.getPluginFile - check plugin file path=[/D:/my/mavenjar/RunningFish/com.runningfish.spmk.upload/1.0.0-SNAPSHOT/com.runningfish.spmk.upload-1.0.0-SNAPSHOT.jar]
+10:57:39.935 [Timer-2] DEBUG com.runningfish.framework.plugin.PluginsMananger.addPlugin - install plugin successful, plugin context=[upload]
+10:57:39.942 [Timer-2] INFO  com.runningfish.spmk.web.person.workbeach.init.InitPlugin.getPluginFile - check plugin file path=[/D:/my/mavenjar/RunningFish/com.runningfish.spmk.web.person.workbeach/1.0.0-SNAPSHOT/com.runningfish.spmk.web.person.workbeach-1.0.0-SNAPSHOT.jar]
+10:57:39.942 [Timer-2] INFO  com.runningfish.spmk.web.person.workbeach.init.InitPlugin.getPluginFile - check plugin file path=[/D:/my/mavenjar/RunningFish/com.runningfish.spmk.web.person.workbeach/1.0.0-SNAPSHOT/com.runningfish.spmk.web.person.workbeach-1.0.0-SNAPSHOT.jar]
+10:57:39.943 [Timer-2] DEBUG com.runningfish.framework.plugin.PluginsMananger.addPlugin - install plugin successful, plugin context=[pswork]
+10:57:47.712 [Timer-2] DEBUG org.apache.ibatis.logging.LogFactory.debug - Logging initialized using 'org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+10:57:47.724 [Timer-2] DEBUG org.mybatis.spring.SqlSessionFactoryBean.debug - Property 'configLocation' not specified, using default MyBatis Configuration
+10:57:47.966 [Timer-2] DEBUG org.mybatis.spring.SqlSessionFactoryBean.debug - Property 'mapperLocations' was not specified or no matching resources found
+10:57:48.720 [Timer-2] INFO  com.runningfish.spmk.upload.init.InitPlugin.getPluginFile - check plugin file path=[/D:/my/mavenjar/RunningFish/com.runningfish.spmk.upload/1.0.0-SNAPSHOT/com.runningfish.spmk.upload-1.0.0-SNAPSHOT.jar]
+10:57:48.721 [Timer-2] INFO  com.runningfish.spmk.upload.init.InitPlugin.getPluginFile - check plugin file path=[/D:/my/mavenjar/RunningFish/com.runningfish.spmk.upload/1.0.0-SNAPSHOT/com.runningfish.spmk.upload-1.0.0-SNAPSHOT.jar]
+10:57:48.721 [Timer-2] DEBUG com.runningfish.framework.plugin.PluginsMananger.addPlugin - install plugin successful, plugin context=[upload]
+10:57:48.729 [Timer-2] INFO  com.runningfish.spmk.web.person.workbeach.init.InitPlugin.getPluginFile - check plugin file path=[/D:/my/mavenjar/RunningFish/com.runningfish.spmk.web.person.workbeach/1.0.0-SNAPSHOT/com.runningfish.spmk.web.person.workbeach-1.0.0-SNAPSHOT.jar]
+10:57:48.729 [Timer-2] INFO  com.runningfish.spmk.web.person.workbeach.init.InitPlugin.getPluginFile - check plugin file path=[/D:/my/mavenjar/RunningFish/com.runningfish.spmk.web.person.workbeach/1.0.0-SNAPSHOT/com.runningfish.spmk.web.person.workbeach-1.0.0-SNAPSHOT.jar]
+10:57:48.730 [Timer-2] DEBUG com.runningfish.framework.plugin.PluginsMananger.addPlugin - install plugin successful, plugin context=[pswork]
+10:57:48.921 [Timer-2] INFO  com.runningfish.spmk.upload.init.InitPlugin.getPluginFile - check plugin file path=[/D:/my/mavenjar/RunningFish/com.runningfish.spmk.upload/1.0.0-SNAPSHOT/com.runningfish.spmk.upload-1.0.0-SNAPSHOT.jar]
+10:57:48.922 [Timer-2] INFO  com.runningfish.spmk.upload.init.InitPlugin.getPluginFile - check plugin file path=[/D:/my/mavenjar/RunningFish/com.runningfish.spmk.upload/1.0.0-SNAPSHOT/com.runningfish.spmk.upload-1.0.0-SNAPSHOT.jar]
+10:57:48.922 [Timer-2] DEBUG com.runningfish.framework.plugin.PluginsMananger.addPlugin - install plugin successful, plugin context=[upload]
+10:57:48.928 [Timer-2] INFO  com.runningfish.spmk.web.person.workbeach.init.InitPlugin.getPluginFile - check plugin file path=[/D:/my/mavenjar/RunningFish/com.runningfish.spmk.web.person.workbeach/1.0.0-SNAPSHOT/com.runningfish.spmk.web.person.workbeach-1.0.0-SNAPSHOT.jar]
+10:57:48.929 [Timer-2] INFO  com.runningfish.spmk.web.person.workbeach.init.InitPlugin.getPluginFile - check plugin file path=[/D:/my/mavenjar/RunningFish/com.runningfish.spmk.web.person.workbeach/1.0.0-SNAPSHOT/com.runningfish.spmk.web.person.workbeach-1.0.0-SNAPSHOT.jar]
+10:57:48.930 [Timer-2] DEBUG com.runningfish.framework.plugin.PluginsMananger.addPlugin - install plugin successful, plugin context=[pswork]
